@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://dncyymcjptm6v"]
+
+[ext_resource type="Script" path="res://user_interface.gd" id="1_83wl0"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 213.0
+offset_top = 88.0
+offset_right = 922.0
+offset_bottom = 345.0
+text = "profit phase
+30 seconds of your properties going up and down on the stock market and generating profit
+
+stock graph to watch them go up and down
+
+Competing against AI opponents stocks, too
+
+Can activate your agent cards to give special buffs
+
+after 30 seconds, goes to party phase"
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 213.0
+offset_top = 88.0
+offset_right = 1364.0
+offset_bottom = 736.0
+script = ExtResource("1_83wl0")

@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcfse4cxqv2c4"]
+
+[ext_resource type="Script" path="res://user_interface.gd" id="1_x6qss"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 246.0
+offset_top = 92.0
+offset_right = 939.0
+offset_bottom = 141.0
+text = "party  phase
+A couple agent cards will show up here and then you have to make a selection of the ones
+you want to add to your team"
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1151.0
+offset_bottom = 648.0
+script = ExtResource("1_x6qss")
+
+[node name="MarginContainer" type="MarginContainer" parent="UI"]
+offset_left = 27.0
+offset_right = 171.0
+offset_bottom = 107.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="Property Phase Button" type="Button" parent="UI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+text = "Go Back to Property Phase"
