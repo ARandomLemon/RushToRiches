@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" path="res://user_interface.gd" id="1_83wl0"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Profit Phase" type="Node2D"]
+
+[node name="Node" type="Node" parent="."]
 
 [node name="Label" type="Label" parent="."]
 offset_left = 213.0

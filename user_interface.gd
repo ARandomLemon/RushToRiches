@@ -13,7 +13,16 @@ func _process(delta: float) -> void:
 
 func _on_start_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://property_phase.tscn")
-
+	
 
 func _on_quit_button_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_buy_example_button_pressed() -> void:
+	# Takes away money and adds "house" to player property array, also updates UI - Tym
+	Globals.money = Globals.money - 100
+	Globals.property_array.append("house")
+	
+	$MoneyLabel.text = "Money: " + str(Globals.money)
+	$PropertyLabel.text = "Properties: " + str(Globals.property_array)

@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="RUSH to RICHES: Before the Bubble Bursts"
+run/main_scene="res://start_menu.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Globals="*res://globals.gd"
 
 [rendering]
 
