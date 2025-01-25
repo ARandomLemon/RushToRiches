@@ -13,6 +13,7 @@ func _ready() -> void:
 	building2.id = 002
 	building1.exchange_building_info.connect(_on_exchange_building_info)
 	building2.exchange_building_info.connect(_on_exchange_building_info)
+	Deck.create_card("test_test", "res://icon.sgv")
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
