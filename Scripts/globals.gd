@@ -2,6 +2,7 @@ extends Node
 
 @onready var money = 0
 @onready var property_array = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+@onready var card_array = ["test"]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
