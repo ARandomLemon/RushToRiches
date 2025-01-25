@@ -1,0 +1,202 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2rywnh0rro0j"]
+
+[ext_resource type="Script" path="res://Scripts/Phases/property_phase.gd" id="1_vra2o"]
+[ext_resource type="Script" path="res://Scripts/globals.gd" id="2_qdl3r"]
+[ext_resource type="Script" path="res://Scripts/UI/user_interface.gd" id="3_tg0ud"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ugmh0"]
+bg_color = Color(0.607843, 0.607843, 0.607843, 0.435294)
+
+[node name="Property Phase" type="Node2D"]
+script = ExtResource("1_vra2o")
+
+[node name="Player" type="Node" parent="."]
+script = ExtResource("2_qdl3r")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 227.0
+offset_top = 91.0
+offset_right = 936.0
+offset_bottom = 296.0
+text = "property phase
+
+purchase properties, get bank loans, assign agents to go into profit phase
+"
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1151.0
+offset_bottom = 648.0
+script = ExtResource("3_tg0ud")
+
+[node name="PropertyLabel" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 50.0
+offset_right = 122.0
+offset_bottom = 73.0
+text = "Properties:"
+
+[node name="MoneyLabel" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 22.0
+offset_right = 107.0
+offset_bottom = 45.0
+text = "Money:"
+
+[node name="MarginContainer" type="MarginContainer" parent="UI"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 195.0
+offset_right = 249.0
+offset_bottom = 302.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="Profit Phase Button" type="Button" parent="UI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Start Profit Phase"
+
+[node name="Buy Example Button" type="Button" parent="UI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Purchase Example Property"
+
+[node name="Stock Market" type="Button" parent="UI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Stock Market"
+
+[node name="View My Stocks" type="Button" parent="UI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "View My Stocks"
+
+[node name="StockMarket" type="Control" parent="UI"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="UI/StockMarket"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1110.0
+offset_bottom = 608.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ugmh0")
+
+[node name="Exit Stock Market" type="Button" parent="UI/StockMarket"]
+layout_mode = 0
+offset_left = 1106.0
+offset_top = 6.0
+offset_right = 1143.0
+offset_bottom = 43.0
+text = "X"
+
+[node name="GridContainer" type="GridContainer" parent="UI/StockMarket"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 28.75
+anchor_bottom = 16.225
+offset_left = 428.0
+offset_top = 151.0
+offset_right = -408.0
+offset_bottom = -213.0
+columns = 3
+
+[node name="Stock" type="Button" parent="UI/StockMarket/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "ATT
+25 Shares @
+25$/Share"
+
+[node name="Stock2" type="Button" parent="UI/StockMarket/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "RSDG
+56 Shares @
+5$/Share"
+
+[node name="Stock3" type="Button" parent="UI/StockMarket/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "ABCD
+40 Shares @
+15$/Share"
+
+[node name="Stock4" type="Button" parent="UI/StockMarket/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "MPSQ
+135 Shares @
+3$/Share"
+
+[node name="Stock5" type="Button" parent="UI/StockMarket/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "GNEL
+25 Shares @
+30$/Share"
+
+[node name="StockInventory" type="Control" parent="UI"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="UI/StockInventory"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1110.0
+offset_bottom = 608.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ugmh0")
+
+[node name="Exit Stock Inventory" type="Button" parent="UI/StockInventory"]
+layout_mode = 0
+offset_left = 1106.0
+offset_top = 6.0
+offset_right = 1143.0
+offset_bottom = 43.0
+text = "X"
+
+[node name="GridContainer" type="GridContainer" parent="UI/StockInventory"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 28.75
+anchor_bottom = 16.225
+offset_left = 6.0
+offset_top = 4.0
+offset_right = -49.0001
+offset_bottom = -3.0
+columns = 10
+
+[connection signal="pressed" from="UI/MarginContainer/VBoxContainer/Profit Phase Button" to="UI" method="_on_profit_phase_button_pressed"]
+[connection signal="pressed" from="UI/MarginContainer/VBoxContainer/Buy Example Button" to="UI" method="_on_buy_example_button_pressed"]
+[connection signal="pressed" from="UI/MarginContainer/VBoxContainer/Stock Market" to="UI" method="_on_stock_market_button_pressed"]
+[connection signal="pressed" from="UI/MarginContainer/VBoxContainer/View My Stocks" to="UI" method="_on_stock_inventory_button_pressed"]
+[connection signal="pressed" from="UI/StockMarket/Exit Stock Market" to="UI" method="_on_stock_market_button_pressed"]
+[connection signal="pressed" from="UI/StockInventory/Exit Stock Inventory" to="UI" method="_on_stock_inventory_button_pressed"]
