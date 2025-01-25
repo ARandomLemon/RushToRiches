@@ -29,31 +29,220 @@ bg_color = Color(0.607843, 0.607843, 0.607843, 0.435294)
 [node name="Property Phase" type="Node2D"]
 script = ExtResource("1_vra2o")
 
+[node name="Player" type="Node" parent="."]
+script = ExtResource("2_qdl3r")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
 [node name="TextureRect2" type="TextureRect" parent="."]
 offset_right = 1154.0
 offset_bottom = 648.0
 texture = SubResource("GradientTexture2D_l3py2")
 
-[node name="Player" type="Node" parent="."]
-script = ExtResource("2_qdl3r")
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 155.0
+offset_bottom = 67.0
+scale = Vector2(2.355, 1)
+pivot_offset = Vector2(77, 33)
 
-[node name="Label" type="Label" parent="."]
-offset_left = 227.0
-offset_top = 91.0
-offset_right = 936.0
-offset_bottom = 296.0
-text = "property phase
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_right = 155.0
+offset_bottom = 67.0
+scale = Vector2(2.355, 1)
+pivot_offset = Vector2(77, 33)
 
-purchase properties, get bank loans, assign agents to go into profit phase
-"
+[node name="ColorRect3" type="ColorRect" parent="."]
+offset_right = 155.0
+offset_bottom = 67.0
+scale = Vector2(2.355, 1)
+pivot_offset = Vector2(77, 33)
 
-[node name="Label2" type="Label" parent="."]
-offset_left = 227.0
-offset_top = 40.0
-offset_right = 936.0
-offset_bottom = 245.0
-text = "HELP!!!!!!!!!!!!!!!!!!!!!!!!!
-"
+[node name="ColorRect4" type="ColorRect" parent="."]
+offset_right = 155.0
+offset_bottom = 67.0
+scale = Vector2(2.355, 1)
+pivot_offset = Vector2(77, 33)
+
+[node name="ColorRect5" type="ColorRect" parent="."]
+offset_right = 155.0
+offset_bottom = 67.0
+scale = Vector2(2.355, 1)
+pivot_offset = Vector2(77, 33)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 274.0
+offset_top = 90.0
+offset_right = 1448.0
+offset_bottom = 988.0
+scale = Vector2(0.755, 0.755)
+texture = ExtResource("4_vn00e")
+
+[node name="BackBlock2" type="ColorRect" parent="."]
+offset_left = 116.0
+offset_top = 488.0
+offset_right = 223.0
+offset_bottom = 527.0
+rotation = 0.268781
+scale = Vector2(4.865, 20.881)
+pivot_offset = Vector2(77, 33)
+color = Color(0.818015, 0.681753, 0.252187, 1)
+
+[node name="BackBlock1" type="ColorRect" parent="."]
+offset_left = 131.0
+offset_top = 492.0
+offset_right = 238.0
+offset_bottom = 531.0
+rotation = 0.13439
+scale = Vector2(3.92, 16.825)
+pivot_offset = Vector2(77, 33)
+color = Color(0.907942, 0.907942, 0.907942, 1)
+
+[node name="MoneyDisplayBlock2" type="ColorRect" parent="."]
+offset_left = 98.0
+offset_top = -11.0
+offset_right = 253.0
+offset_bottom = 56.0
+rotation = 0.10821
+scale = Vector2(4.485, 3.531)
+pivot_offset = Vector2(77, 33)
+color = Color(0.917647, 0.780392, 0.364706, 1)
+
+[node name="MoneyDisplayBlock" type="ColorRect" parent="."]
+offset_left = 117.0
+offset_top = -18.0
+offset_right = 272.0
+offset_bottom = 49.0
+rotation = 0.13439
+scale = Vector2(3.83, 3.015)
+pivot_offset = Vector2(77, 33)
+color = Color(0.226707, 0.226707, 0.226707, 1)
+
+[node name="Building10" parent="." instance=ExtResource("4_5vo6a")]
+position = Vector2(1142, 123)
+scale = Vector2(0.678711, 0.759692)
+texture = ExtResource("6_5ihp5")
+
+[node name="BuyButton" parent="Building10" index="0"]
+offset_left = -44.0
+offset_top = -95.0
+offset_right = 64.0
+offset_bottom = 22.0
+
+[node name="Building8" parent="." instance=ExtResource("4_5vo6a")]
+position = Vector2(947, 103)
+scale = Vector2(1.08008, 1.05469)
+texture = ExtResource("7_y1731")
+
+[node name="BuyButton" parent="Building8" index="0"]
+offset_left = -38.0
+offset_top = -96.0
+offset_right = 48.0
+offset_bottom = 49.0
+
+[node name="Building9" parent="." instance=ExtResource("4_5vo6a")]
+position = Vector2(1049, 90)
+scale = Vector2(1.05078, 1.14814)
+texture = ExtResource("8_xhg3w")
+
+[node name="BuyButton" parent="Building9" index="0"]
+offset_left = -36.0
+offset_top = -70.0
+offset_right = 49.0
+offset_bottom = 44.0
+
+[node name="Building7" parent="." instance=ExtResource("4_5vo6a")]
+position = Vector2(1023.5, 208)
+scale = Vector2(1.25391, 1.17969)
+texture = ExtResource("9_3fyb0")
+
+[node name="BuyButton" parent="Building7" index="0"]
+offset_left = -38.0
+offset_top = -43.0
+offset_right = 66.0
+offset_bottom = 21.0
+
+[node name="Building4" parent="." instance=ExtResource("4_5vo6a")]
+position = Vector2(760, 114)
+scale = Vector2(1.25391, 1.17969)
+texture = ExtResource("10_ds4b3")
+
+[node name="BuyButton" parent="Building4" index="0"]
+offset_left = -38.0
+offset_top = -96.0
+offset_right = 15.0
+offset_bottom = 53.0
+
+[node name="Building5" parent="." instance=ExtResource("4_5vo6a")]
+position = Vector2(809, 227)
+scale = Vector2(1.31453, 1.44734)
+texture = ExtResource("11_4a1k0")
+
+[node name="BuyButton" parent="Building5" index="0"]
+offset_left = -19.0
+offset_top = -94.0
+offset_right = 47.0
+offset_bottom = 34.0
+
+[node name="Building6" parent="." instance=ExtResource("4_5vo6a")]
+position = Vector2(946, 251)
+scale = Vector2(0.933592, 1.08593)
+texture = ExtResource("12_pswn0")
+
+[node name="BuyButton" parent="Building6" index="0"]
+offset_left = -79.0
+offset_top = -33.0
+offset_right = 34.0
+offset_bottom = 42.0
+
+[node name="Building1" parent="." instance=ExtResource("4_5vo6a")]
+position = Vector2(1093, 479)
+scale = Vector2(0.980625, 1.1525)
+texture = ExtResource("6_1vrkp")
+
+[node name="BuyButton" parent="Building1" index="0"]
+offset_left = -45.0
+offset_top = -91.0
+offset_right = 46.0
+offset_bottom = 84.0
+
+[node name="Building2" parent="." instance=ExtResource("4_5vo6a")]
+position = Vector2(846, 308)
+scale = Vector2(1.03281, 1.05625)
+texture = ExtResource("7_b10u6")
+
+[node name="BuyButton" parent="Building2" index="0"]
+offset_left = -60.0
+offset_top = -14.0
+offset_right = 18.0
+offset_bottom = 55.0
+
+[node name="Building3" parent="." instance=ExtResource("4_5vo6a")]
+position = Vector2(782, 270)
+scale = Vector2(1.09922, 1.06406)
+texture = ExtResource("9_j21lb")
+
+[node name="BuyButton" parent="Building3" index="0"]
+offset_left = -96.0
+offset_top = -74.0
+offset_right = -13.0
+offset_bottom = 20.0
+
+[node name="NewsBar" type="ColorRect" parent="."]
+offset_left = 104.0
+offset_top = 582.0
+offset_right = 601.0
+offset_bottom = 674.0
+scale = Vector2(2.355, 1)
+pivot_offset = Vector2(77, 33)
+
+[node name="NewsBar2" type="ColorRect" parent="."]
+offset_left = -66.0
+offset_top = 601.0
+offset_right = 89.0
+offset_bottom = 668.0
+scale = Vector2(2.355, 2.195)
+pivot_offset = Vector2(77, 33)
+color = Color(0.999996, 0.425794, 0.357092, 1)
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
@@ -64,60 +253,63 @@ script = ExtResource("3_tg0ud")
 
 [node name="PropertyLabel" type="Label" parent="UI"]
 layout_mode = 0
-offset_left = 37.0
-offset_top = 50.0
-offset_right = 122.0
-offset_bottom = 73.0
+offset_left = 530.0
+offset_top = 59.0
+offset_right = 615.0
+offset_bottom = 82.0
+rotation = 0.13439
 text = "Properties:"
 
 [node name="MoneyLabel" type="Label" parent="UI"]
 layout_mode = 0
-offset_left = 37.0
-offset_top = 22.0
-offset_right = 107.0
-offset_bottom = 45.0
+offset_left = 18.0
+offset_top = 55.0
+offset_right = 88.0
+offset_bottom = 78.0
+rotation = 0.13439
 text = "Money:"
 
 [node name="CardLabel" type="Label" parent="UI"]
 layout_mode = 0
-offset_left = 37.0
-offset_top = 78.0
-offset_right = 91.0
-offset_bottom = 101.0
+offset_left = 529.0
+offset_top = 29.0
+offset_right = 583.0
+offset_bottom = 52.0
+rotation = 0.13439
 text = "Cards:"
 
-[node name="MarginContainer" type="MarginContainer" parent="UI"]
-layout_mode = 0
-offset_left = 27.0
-offset_top = 195.0
-offset_right = 249.0
-offset_bottom = 302.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/MarginContainer"]
+[node name="Profit Phase Button" type="Button" parent="UI"]
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 4
-
-[node name="Profit Phase Button" type="Button" parent="UI/MarginContainer/VBoxContainer"]
-layout_mode = 2
+offset_left = 28.0
+offset_top = 148.0
+offset_right = 341.0
+offset_bottom = 215.0
+rotation = 0.113446
+pivot_offset = Vector2(71.94, 14.98)
 size_flags_horizontal = 0
 size_flags_vertical = 0
 text = "Start Profit Phase"
 
-[node name="Buy Example Button" type="Button" parent="UI/MarginContainer/VBoxContainer"]
+[node name="Stock Market" type="Button" parent="UI"]
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-text = "Purchase Example Property"
-
-[node name="Stock Market" type="Button" parent="UI/MarginContainer/VBoxContainer"]
-layout_mode = 2
+offset_left = 33.0
+offset_top = 231.0
+offset_right = 318.0
+offset_bottom = 296.0
+rotation = 0.113446
+pivot_offset = Vector2(54.94, 13.82)
 size_flags_horizontal = 0
 size_flags_vertical = 0
 text = "Stock Market"
 
-[node name="View My Stocks" type="Button" parent="UI/MarginContainer/VBoxContainer"]
+[node name="View My Stocks" type="Button" parent="UI"]
 layout_mode = 2
+offset_left = 65.0
+offset_top = 320.0
+offset_right = 250.0
+offset_bottom = 389.0
+rotation = 0.113446
+pivot_offset = Vector2(63.26, 13.98)
 size_flags_horizontal = 0
 size_flags_vertical = 0
 text = "View My Stocks"
@@ -235,128 +427,9 @@ offset_right = -49.0001
 offset_bottom = -3.0
 columns = 10
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_left = 274.0
-offset_top = 90.0
-offset_right = 1448.0
-offset_bottom = 988.0
-scale = Vector2(0.755, 0.755)
-texture = ExtResource("4_vn00e")
-
-[node name="Building10" parent="." instance=ExtResource("4_5vo6a")]
-position = Vector2(1142, 123)
-scale = Vector2(0.678711, 0.759692)
-texture = ExtResource("6_5ihp5")
-
-[node name="BuyButton" parent="Building10" index="0"]
-offset_left = -44.0
-offset_top = -95.0
-offset_right = 64.0
-offset_bottom = 22.0
-
-[node name="Building8" parent="." instance=ExtResource("4_5vo6a")]
-position = Vector2(947, 103)
-scale = Vector2(1.08008, 1.05469)
-texture = ExtResource("7_y1731")
-
-[node name="BuyButton" parent="Building8" index="0"]
-offset_left = -38.0
-offset_top = -96.0
-offset_right = 48.0
-offset_bottom = 49.0
-
-[node name="Building9" parent="." instance=ExtResource("4_5vo6a")]
-position = Vector2(1049, 90)
-scale = Vector2(1.05078, 1.14814)
-texture = ExtResource("8_xhg3w")
-
-[node name="BuyButton" parent="Building9" index="0"]
-offset_left = -36.0
-offset_top = -70.0
-offset_right = 49.0
-offset_bottom = 44.0
-
-[node name="Building7" parent="." instance=ExtResource("4_5vo6a")]
-position = Vector2(1023.5, 208)
-scale = Vector2(1.25391, 1.17969)
-texture = ExtResource("9_3fyb0")
-
-[node name="BuyButton" parent="Building7" index="0"]
-offset_left = -38.0
-offset_top = -43.0
-offset_right = 66.0
-offset_bottom = 21.0
-
-[node name="Building4" parent="." instance=ExtResource("4_5vo6a")]
-position = Vector2(760, 114)
-scale = Vector2(1.25391, 1.17969)
-texture = ExtResource("10_ds4b3")
-
-[node name="BuyButton" parent="Building4" index="0"]
-offset_left = -38.0
-offset_top = -96.0
-offset_right = 15.0
-offset_bottom = 53.0
-
-[node name="Building5" parent="." instance=ExtResource("4_5vo6a")]
-position = Vector2(809, 227)
-scale = Vector2(1.31453, 1.44734)
-texture = ExtResource("11_4a1k0")
-
-[node name="BuyButton" parent="Building5" index="0"]
-offset_left = -19.0
-offset_top = -94.0
-offset_right = 47.0
-offset_bottom = 34.0
-
-[node name="Building6" parent="." instance=ExtResource("4_5vo6a")]
-position = Vector2(946, 251)
-scale = Vector2(0.933592, 1.08593)
-texture = ExtResource("12_pswn0")
-
-[node name="BuyButton" parent="Building6" index="0"]
-offset_left = -79.0
-offset_top = -33.0
-offset_right = 34.0
-offset_bottom = 42.0
-
-[node name="Building1" parent="." instance=ExtResource("4_5vo6a")]
-position = Vector2(1093, 479)
-scale = Vector2(0.980625, 1.1525)
-texture = ExtResource("6_1vrkp")
-
-[node name="BuyButton" parent="Building1" index="0"]
-offset_left = -45.0
-offset_top = -91.0
-offset_right = 46.0
-offset_bottom = 84.0
-
-[node name="Building2" parent="." instance=ExtResource("4_5vo6a")]
-position = Vector2(846, 308)
-scale = Vector2(1.03281, 1.05625)
-texture = ExtResource("7_b10u6")
-
-[node name="BuyButton" parent="Building2" index="0"]
-offset_left = -60.0
-offset_top = -14.0
-offset_right = 18.0
-offset_bottom = 55.0
-
-[node name="Building3" parent="." instance=ExtResource("4_5vo6a")]
-position = Vector2(782, 270)
-scale = Vector2(1.09922, 1.06406)
-texture = ExtResource("9_j21lb")
-
-[node name="BuyButton" parent="Building3" index="0"]
-offset_left = -96.0
-offset_top = -74.0
-offset_right = -13.0
-offset_bottom = 20.0
-
-[connection signal="pressed" from="UI/MarginContainer/VBoxContainer/Profit Phase Button" to="UI" method="_on_profit_phase_button_pressed"]
-[connection signal="pressed" from="UI/MarginContainer/VBoxContainer/Buy Example Button" to="UI" method="_on_buy_example_button_pressed"]
-[connection signal="pressed" from="UI/MarginContainer/VBoxContainer/Stock Market" to="UI" method="_on_stock_market_button_pressed"]
-[connection signal="pressed" from="UI/MarginContainer/VBoxContainer/View My Stocks" to="UI" method="_on_stock_inventory_button_pressed"]
+[connection signal="pressed" from="UI/Profit Phase Button" to="UI" method="_on_profit_phase_button_pressed"]
+[connection signal="pressed" from="UI/Stock Market" to="UI" method="_on_stock_market_button_pressed"]
+[connection signal="pressed" from="UI/View My Stocks" to="UI" method="_on_stock_inventory_button_pressed"]
 [connection signal="pressed" from="UI/StockMarket/Exit Stock Market" to="UI" method="_on_stock_market_button_pressed"]
 [connection signal="pressed" from="UI/StockInventory/Exit Stock Inventory" to="UI" method="_on_stock_inventory_button_pressed"]
 
