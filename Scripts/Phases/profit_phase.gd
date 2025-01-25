@@ -17,6 +17,6 @@ func _on_timer_timeout() -> void:
 	current_time = current_time - 1
 	if (current_time == 0):
 			current_time = 30
-			get_tree().change_scene_to_file("res://party_phase.tscn")
+			get_tree().change_scene_to_file("res://Scenes/party_phase.tscn")
 	$TimerLabel.text = "Time Left: " + str(current_time)
 	$Timer.start()
