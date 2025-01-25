@@ -37,6 +37,14 @@ func _on_property_phase_button_pressed() -> void:
 	
 func _on_stock_market_button_pressed() -> void:
 	$StockMarket.visible = !$StockMarket.visible
+	if($StockMarket.get_z_index() == 0):
+		$StockMarket.set_z_index(1)
+	else:
+		$StockMarket.set_z_index(0)
 
 func _on_stock_inventory_button_pressed() -> void:
 	$StockInventory.visible = !$StockInventory.visible
+	if($StockMarket.get_z_index() == 0):
+		$StockInventory.set_z_index(1)
+	else:
+		$StockInventory.set_z_index(0)
