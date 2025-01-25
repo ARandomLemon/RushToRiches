@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 
 
 func _on_start_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://property_phase.tscn")
+	get_tree().change_scene_to_file("res://Scenes/property_phase.tscn")
 	
 
 func _on_quit_button_pressed() -> void:
@@ -29,8 +29,14 @@ func _on_buy_example_button_pressed() -> void:
 
 
 func _on_profit_phase_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://profit_phase.tscn")
+	get_tree().change_scene_to_file("res://Scenes/profit_phase.tscn")
 
 
 func _on_property_phase_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://property_phase.tscn")
+	get_tree().change_scene_to_file("res://Scenes/property_phase.tscn")
+	
+func _on_stock_market_button_pressed() -> void:
+	$StockMarket.visible = !$StockMarket.visible
+
+func _on_stock_inventory_button_pressed() -> void:
+	$StockInventory.visible = !$StockInventory.visible

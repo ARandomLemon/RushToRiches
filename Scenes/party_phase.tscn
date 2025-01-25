@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cmd3048uf0vk"]
 
-[ext_resource type="Script" path="res://user_interface.gd" id="1_x6qss"]
+[ext_resource type="Script" path="res://Scripts/UI/user_interface.gd" id="1_x6qss"]
 
 [node name="Party Phase" type="Node2D"]
 
