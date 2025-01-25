@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dncyymcjptm6v"]
 
-[ext_resource type="Script" path="res://Scripts/ui.gd" id="1_hjmvt"]
+[ext_resource type="Script" path="res://Scripts/Phases/profit_phase.gd" id="1_dg8nf"]
 
 [node name="Profit Phase" type="Node2D"]
 
@@ -9,7 +9,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 648.0
-script = ExtResource("1_hjmvt")
+script = ExtResource("1_dg8nf")
 
 [node name="TotalMoneyLabel" type="Label" parent="Prof_UI"]
 layout_mode = 0
