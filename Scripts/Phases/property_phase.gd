@@ -45,6 +45,7 @@ func _process(delta: float) -> void:
 func _update_text():
 	$UI/MoneyLabel.text = "Money: " + str(Globals.money)
 	$UI/PropertyLabel.text = "Properties: " + str(Globals.property_array)
+	$UI/CardLabel.text = "Cards: " + str(Globals.card_array)
 
 func _on_exchange_building_info(id, category):
 	print(id, (category))
