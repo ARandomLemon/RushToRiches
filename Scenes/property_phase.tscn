@@ -1,10 +1,20 @@
-[gd_scene load_steps=7 format=3 uid="uid://b2rywnh0rro0j"]
+[gd_scene load_steps=17 format=3 uid="uid://b2rywnh0rro0j"]
 
 [ext_resource type="Script" path="res://Scripts/Phases/property_phase.gd" id="1_vra2o"]
 [ext_resource type="Script" path="res://Scripts/globals.gd" id="2_qdl3r"]
 [ext_resource type="Script" path="res://Scripts/UI/user_interface.gd" id="3_tg0ud"]
 [ext_resource type="PackedScene" uid="uid://cba6o0yxd3yij" path="res://Scenes/building.tscn" id="4_5vo6a"]
-[ext_resource type="Texture2D" uid="uid://81c0v327lxpd" path="res://icon.svg" id="5_unglb"]
+[ext_resource type="Texture2D" uid="uid://bvhvkyd2qd8ot" path="res://Assets(Buildings and foundation)/Foundation.png" id="4_vn00e"]
+[ext_resource type="Texture2D" uid="uid://cgf3158w1qv5x" path="res://Assets(Buildings and foundation)/Building2.png" id="6_1vrkp"]
+[ext_resource type="Texture2D" uid="uid://dou8645saqrct" path="res://Assets(Buildings and foundation)/Warehouse.png" id="6_5ihp5"]
+[ext_resource type="Texture2D" uid="uid://dvjfmv36faq1b" path="res://Assets(Buildings and foundation)/Bafe.png" id="7_b10u6"]
+[ext_resource type="Texture2D" uid="uid://ddiokywxppj7i" path="res://Assets(Buildings and foundation)/Multiple.png" id="7_y1731"]
+[ext_resource type="Texture2D" uid="uid://bvp81ljixtqvl" path="res://Assets(Buildings and foundation)/Building.png" id="8_xhg3w"]
+[ext_resource type="Texture2D" uid="uid://cwn1fk5q42enl" path="res://Assets(Buildings and foundation)/RealEstate.png" id="9_3fyb0"]
+[ext_resource type="Texture2D" uid="uid://ce2o2s2qayjq6" path="res://Assets(Buildings and foundation)/Commercial.png" id="9_j21lb"]
+[ext_resource type="Texture2D" uid="uid://crc8elv03el1o" path="res://Assets(Buildings and foundation)/Tall.png" id="10_ds4b3"]
+[ext_resource type="Texture2D" uid="uid://ch81hrjsamw3s" path="res://Assets(Buildings and foundation)/CompanyBuilding.png" id="11_4a1k0"]
+[ext_resource type="Texture2D" uid="uid://bbitvxn0boite" path="res://Assets(Buildings and foundation)/Mall.png" id="12_pswn0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ugmh0"]
 bg_color = Color(0.607843, 0.607843, 0.607843, 0.435294)
@@ -23,6 +33,14 @@ offset_bottom = 296.0
 text = "property phase
 
 purchase properties, get bank loans, assign agents to go into profit phase
+"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 227.0
+offset_top = 40.0
+offset_right = 936.0
+offset_bottom = 245.0
+text = "HELP!!!!!!!!!!!!!!!!!!!!!!!!!
 "
 
 [node name="UI" type="Control" parent="."]
@@ -196,15 +214,123 @@ offset_right = -49.0001
 offset_bottom = -3.0
 columns = 10
 
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 274.0
+offset_top = 90.0
+offset_right = 1448.0
+offset_bottom = 988.0
+scale = Vector2(0.755, 0.755)
+texture = ExtResource("4_vn00e")
+
+[node name="Building8" parent="." instance=ExtResource("4_5vo6a")]
+position = Vector2(1142, 123)
+scale = Vector2(0.678711, 0.759692)
+texture = ExtResource("6_5ihp5")
+
+[node name="BuyButton" parent="Building8" index="0"]
+offset_left = -44.0
+offset_top = -95.0
+offset_right = 64.0
+offset_bottom = 22.0
+
+[node name="Building9" parent="." instance=ExtResource("4_5vo6a")]
+position = Vector2(947, 103)
+scale = Vector2(1.08008, 1.05469)
+texture = ExtResource("7_y1731")
+
+[node name="BuyButton" parent="Building9" index="0"]
+offset_left = -38.0
+offset_top = -96.0
+offset_right = 48.0
+offset_bottom = 49.0
+
+[node name="Building3" parent="." instance=ExtResource("4_5vo6a")]
+position = Vector2(1049, 90)
+scale = Vector2(1.05078, 1.14814)
+texture = ExtResource("8_xhg3w")
+
+[node name="BuyButton" parent="Building3" index="0"]
+offset_left = -36.0
+offset_top = -70.0
+offset_right = 49.0
+offset_bottom = 44.0
+
+[node name="Building6" parent="." instance=ExtResource("4_5vo6a")]
+position = Vector2(1023.5, 208)
+scale = Vector2(1.25391, 1.17969)
+texture = ExtResource("9_3fyb0")
+
+[node name="BuyButton" parent="Building6" index="0"]
+offset_left = -38.0
+offset_top = -43.0
+offset_right = 66.0
+offset_bottom = 21.0
+
+[node name="Building7" parent="." instance=ExtResource("4_5vo6a")]
+position = Vector2(760, 114)
+scale = Vector2(1.25391, 1.17969)
+texture = ExtResource("10_ds4b3")
+
+[node name="BuyButton" parent="Building7" index="0"]
+offset_left = -38.0
+offset_top = -96.0
+offset_right = 15.0
+offset_bottom = 53.0
+
+[node name="Building5" parent="." instance=ExtResource("4_5vo6a")]
+position = Vector2(809, 227)
+scale = Vector2(1.31453, 1.44734)
+texture = ExtResource("11_4a1k0")
+
+[node name="BuyButton" parent="Building5" index="0"]
+offset_left = -19.0
+offset_top = -94.0
+offset_right = 47.0
+offset_bottom = 34.0
+
+[node name="Building10" parent="Building5" instance=ExtResource("4_5vo6a")]
+position = Vector2(104.22, 16.5821)
+scale = Vector2(0.71021, 0.750297)
+texture = ExtResource("12_pswn0")
+
+[node name="BuyButton" parent="Building5/Building10" index="0"]
+offset_left = -79.0
+offset_top = -33.0
+offset_right = 34.0
+offset_bottom = 42.0
+
 [node name="Building1" parent="." instance=ExtResource("4_5vo6a")]
-position = Vector2(948, 508)
-scale = Vector2(0.555, 0.555)
-texture = ExtResource("5_unglb")
+position = Vector2(1093, 479)
+scale = Vector2(0.980625, 1.1525)
+texture = ExtResource("6_1vrkp")
+
+[node name="BuyButton" parent="Building1" index="0"]
+offset_left = -45.0
+offset_top = -91.0
+offset_right = 46.0
+offset_bottom = 84.0
 
 [node name="Building2" parent="." instance=ExtResource("4_5vo6a")]
-position = Vector2(825, 475)
-scale = Vector2(0.55, 0.55)
-texture = ExtResource("5_unglb")
+position = Vector2(846, 308)
+scale = Vector2(1.03281, 1.05625)
+texture = ExtResource("7_b10u6")
+
+[node name="BuyButton" parent="Building2" index="0"]
+offset_left = -60.0
+offset_top = -14.0
+offset_right = 18.0
+offset_bottom = 55.0
+
+[node name="Building4" parent="." instance=ExtResource("4_5vo6a")]
+position = Vector2(782, 270)
+scale = Vector2(1.09922, 1.06406)
+texture = ExtResource("9_j21lb")
+
+[node name="BuyButton" parent="Building4" index="0"]
+offset_left = -96.0
+offset_top = -74.0
+offset_right = -13.0
+offset_bottom = 20.0
 
 [connection signal="pressed" from="UI/MarginContainer/VBoxContainer/Profit Phase Button" to="UI" method="_on_profit_phase_button_pressed"]
 [connection signal="pressed" from="UI/MarginContainer/VBoxContainer/Buy Example Button" to="UI" method="_on_buy_example_button_pressed"]
@@ -212,3 +338,14 @@ texture = ExtResource("5_unglb")
 [connection signal="pressed" from="UI/MarginContainer/VBoxContainer/View My Stocks" to="UI" method="_on_stock_inventory_button_pressed"]
 [connection signal="pressed" from="UI/StockMarket/Exit Stock Market" to="UI" method="_on_stock_market_button_pressed"]
 [connection signal="pressed" from="UI/StockInventory/Exit Stock Inventory" to="UI" method="_on_stock_inventory_button_pressed"]
+
+[editable path="Building8"]
+[editable path="Building9"]
+[editable path="Building3"]
+[editable path="Building6"]
+[editable path="Building7"]
+[editable path="Building5"]
+[editable path="Building5/Building10"]
+[editable path="Building1"]
+[editable path="Building2"]
+[editable path="Building4"]
