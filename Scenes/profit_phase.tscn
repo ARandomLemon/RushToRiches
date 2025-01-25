@@ -1,45 +1,57 @@
-[gd_scene load_steps=3 format=3 uid="uid://c5hcix0tjhrhw"]
+[gd_scene load_steps=2 format=3 uid="uid://dncyymcjptm6v"]
 
-[ext_resource type="Script" path="res://Scripts/UI/user_interface.gd" id="1_83wl0"]
-[ext_resource type="Script" path="res://Scripts/Phases/profit_phase.gd" id="1_xv1ev"]
+[ext_resource type="Script" path="res://Scripts/ui.gd" id="1_hjmvt"]
 
 [node name="Profit Phase" type="Node2D"]
-script = ExtResource("1_xv1ev")
 
-[node name="Node" type="Node" parent="."]
-
-[node name="Label" type="Label" parent="."]
-offset_left = 213.0
-offset_top = 88.0
-offset_right = 922.0
-offset_bottom = 345.0
-text = "profit phase
-30 seconds of your properties going up and down on the stock market and generating profit
-
-stock graph to watch them go up and down
-
-Competing against AI opponents stocks, too
-
-Can activate your agent cards to give special buffs
-
-after 30 seconds, goes to party phase"
-
-[node name="UI" type="Control" parent="."]
+[node name="Prof_UI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 213.0
-offset_top = 88.0
-offset_right = 1364.0
-offset_bottom = 736.0
-script = ExtResource("1_83wl0")
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("1_hjmvt")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="TotalMoneyLabel" type="Label" parent="Prof_UI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Total Balance: $"
 
-[node name="TimerLabel" type="Label" parent="."]
-offset_left = 326.0
-offset_top = 405.0
-offset_right = 366.0
-offset_bottom = 428.0
-text = "Time Left:"
+[node name="Timer" type="Node" parent="Prof_UI"]
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="TimeLabel" type="Label" parent="Prof_UI/Timer"]
+offset_left = 1043.0
+offset_top = 1.0
+offset_right = 1150.0
+offset_bottom = 24.0
+text = "Time Left: 30s"
+
+[node name="Timer" type="Timer" parent="Prof_UI/Timer"]
+wait_time = 30.0
+one_shot = true
+autostart = true
+
+[node name="TotalEarnLabel" type="Label" parent="Prof_UI"]
+layout_mode = 0
+offset_top = 29.0
+offset_right = 128.0
+offset_bottom = 52.0
+text = "Total Earnings: $"
+
+[node name="PropEarnLabel" type="Label" parent="Prof_UI"]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 159.0
+offset_right = 181.0
+offset_bottom = 182.0
+text = "Properties Earniings: $"
+
+[node name="StockEarnLabel" type="Label" parent="Prof_UI"]
+layout_mode = 0
+offset_left = 559.0
+offset_top = 159.0
+offset_right = 599.0
+offset_bottom = 182.0
+text = "Stock Earnings: $"
+
+[connection signal="timeout" from="Prof_UI/Timer/Timer" to="Prof_UI" method="_on_timer_timeout"]
