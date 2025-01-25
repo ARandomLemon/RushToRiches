@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cmd3048uf0vk"]
+[gd_scene load_steps=3 format=3 uid="uid://cmd3048uf0vk"]
 
+[ext_resource type="Script" path="res://Scripts/Phases/party_phase.gd" id="1_1uxpp"]
 [ext_resource type="Script" path="res://Scripts/UI/user_interface.gd" id="1_x6qss"]
 
 [node name="Party Phase" type="Node2D"]
+script = ExtResource("1_1uxpp")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 246.0

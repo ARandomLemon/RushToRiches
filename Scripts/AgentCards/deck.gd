@@ -17,7 +17,7 @@ func create_card(card_name : String, texture_path: String):
 func _ready():
 	# test cards
 	print($GridContainer)
-	create_card("test_1", "res://icon.svg")
+	#create_card("test_1", "res://icon.svg")
 	#create_card("test_2", "res://icon.svg")
 	#create_card("test_3", "res://icon.svg")
 
