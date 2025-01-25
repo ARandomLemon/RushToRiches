@@ -4,7 +4,6 @@ var id = 000
 var category = "retail"
 var cost = 0
 var dollarsPerSecond = 0
-var purchased = false
 
 signal exchange_building_info(id, category)
 
@@ -18,11 +17,11 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_buy_button_pressed() -> void:
-	if (purchased == false):
-		print("wow")
-		Globals.property_array.append(id)
-		exchange_building_info.emit(id, category)
-		purchased = true
-	
-	else:
-		print("already bought!")
+	for i in 10:
+		if (Globals.property_array[i] == id ):
+			print("already bought!")
+			break
+		if (Globals.property_array[i] == 0 ):
+			Globals.property_array[i] = id
+			exchange_building_info.emit(id, category)
+			break
