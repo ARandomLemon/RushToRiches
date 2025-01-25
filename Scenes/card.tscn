@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1ox4j80bpn8y"]
+
+[ext_resource type="Script" path="res://Scripts/AgentsCards/card.gd" id="1_mwcxm"]
+
+[node name="Card" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_mwcxm")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CardName" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Modifier" type="Label" parent="VBoxContainer"]
+layout_mode = 2
