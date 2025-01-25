@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://bcfse4cxqv2c4"]
+[gd_scene load_steps=2 format=3 uid="uid://cmd3048uf0vk"]
 
 [ext_resource type="Script" path="res://user_interface.gd" id="1_x6qss"]
 
@@ -21,6 +21,7 @@ offset_bottom = 648.0
 script = ExtResource("1_x6qss")
 
 [node name="MarginContainer" type="MarginContainer" parent="UI"]
+layout_mode = 0
 offset_left = 27.0
 offset_right = 171.0
 offset_bottom = 107.0
@@ -35,3 +36,5 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 text = "Go Back to Property Phase"
+
+[connection signal="pressed" from="UI/MarginContainer/VBoxContainer/Property Phase Button" to="UI" method="_on_property_phase_button_pressed"]

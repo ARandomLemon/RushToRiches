@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bi7q3ca0fl42i"]
+[gd_scene load_steps=4 format=3 uid="uid://b2rywnh0rro0j"]
 
 [ext_resource type="Script" path="res://globals.gd" id="1_hofqa"]
 [ext_resource type="Script" path="res://user_interface.gd" id="1_ltdr3"]
@@ -65,4 +65,5 @@ text = "property phase
 purchase properties, get bank loans, assign agents to go into profit phase
 "
 
+[connection signal="pressed" from="UI/MarginContainer/VBoxContainer/Profit Phase Button" to="UI" method="_on_profit_phase_button_pressed"]
 [connection signal="pressed" from="UI/MarginContainer/VBoxContainer/Buy Example Button" to="UI" method="_on_buy_example_button_pressed"]
