@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c5hcix0tjhrhw"]
+[gd_scene load_steps=8 format=3 uid="uid://dncyymcjptm6v"]
 
 [ext_resource type="Script" path="res://Scripts/Phases/profit_phase.gd" id="1_dg8nf"]
 [ext_resource type="FontFile" uid="uid://j3g2jwwo7gnj" path="res://Assets(Buildings and foundation)/AlfaSlabOne-Regular.ttf" id="2_tbot1"]
@@ -131,7 +131,7 @@ offset_right = 599.0
 offset_bottom = 182.0
 text = "Stock Earnings: $"
 
-[node name="Bubble" type="Sprite2D" parent="."]
+[node name="Bubble" type="Sprite2D" parent="Prof_UI"]
 position = Vector2(916, 446)
 scale = Vector2(0.6175, 0.6175)
 texture = ExtResource("3_owbsf")
