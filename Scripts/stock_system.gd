@@ -1,6 +1,5 @@
 extends Node
 
-@onready var inflation_rate: float = 0.5
 @onready var purchased_stocks = {}
 @onready var purchased_stocks_ids = []
 
@@ -62,12 +61,16 @@ class Stock:
 	var id: String = ""
 	var share_count: int = 100
 	var share_cost: int = 5
+	var projection: float = 0 #This means stable
+	var original_share_cost: int = 0
 	
 	func _init(name: String, id: String, share_count: int, share_cost: int):
 		self.name = name
 		self.id = id
 		self.share_count = share_count
 		self.share_cost = share_cost
+		self.original_share_cost = share_cost
+		self.projection = randf() * 2.0 - 1.0
 	
 	func purchase_stock(amount) -> bool:
 		if Globals.money < share_cost * amount:
@@ -82,6 +85,16 @@ class Stock:
 		StockSystem.purchased_stocks[id] += amount
 		Globals.money -= share_cost * amount
 		return true
+	
+	func advance_projection() -> void:
+		share_cost += projection
+		if share_cost > original_share_cost * 2:
+			share_cost = original_share_cost / 2
+			share_count *= 2
+		elif share_cost < original_share_cost / 2:
+			share_cost = original_share_cost * 2
+			if StockSystem.purchased_stocks.has(id):
+				StockSystem.purchased_stocks[id] /= 2
 
 func is_stock_purchased(id: String) -> bool:
 	return purchased_stocks.has(id)

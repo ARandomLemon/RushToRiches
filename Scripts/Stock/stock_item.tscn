@@ -1,18 +1,23 @@
-[gd_scene load_steps=7 format=3 uid="uid://ck020hc5ue7v4"]
+[gd_scene load_steps=8 format=3 uid="uid://ck020hc5ue7v4"]
 
 [ext_resource type="Script" path="res://Scripts/Stock/stock_item.gd" id="1_bsiyy"]
 
 [sub_resource type="Gradient" id="Gradient_oxwxs"]
-colors = PackedColorArray(0.310617, 0.310617, 0.310617, 1, 0.462291, 0.462291, 0.462291, 1)
+colors = PackedColorArray(0.71148, 0.552411, 0.632062, 1, 0.45684, 0.719089, 0.777734, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_i5phs"]
 gradient = SubResource("Gradient_oxwxs")
+fill_from = Vector2(0.229358, 0.155963)
 fill_to = Vector2(1, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u5pj8"]
+bg_color = Color(0.6, 0.6, 0.6, 0.294118)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_160lv"]
-bg_color = Color(0.712129, 0.712129, 0.712129, 1)
+bg_color = Color(0.713726, 0.713726, 0.713726, 0.262745)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btphr"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="LabelSettings" id="LabelSettings_v61ux"]
 font_size = 19
@@ -45,6 +50,7 @@ custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 theme_override_styles/hover = SubResource("StyleBoxFlat_u5pj8")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_160lv")
+theme_override_styles/normal = SubResource("StyleBoxFlat_btphr")
 
 [node name="Short" type="Label" parent="."]
 layout_mode = 2
@@ -63,7 +69,7 @@ offset_top = -39.0
 offset_right = 305.0
 offset_bottom = 37.0
 pivot_offset = Vector2(0, 74.69)
-color = Color(0.136826, 0.136826, 0.136826, 1)
+color = Color(0.20871, 0.20871, 0.20871, 1)
 
 [node name="Long" type="Label" parent="Short/Hint"]
 layout_mode = 0

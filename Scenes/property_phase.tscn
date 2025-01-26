@@ -187,7 +187,7 @@ offset_left = 6.0
 offset_top = 4.0
 offset_right = -49.0001
 offset_bottom = -3.0
-columns = 10
+columns = 8
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = 274.0

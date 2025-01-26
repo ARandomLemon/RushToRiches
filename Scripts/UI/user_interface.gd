@@ -38,6 +38,8 @@ func _on_stock_market_button_pressed() -> void:
 func _on_stock_inventory_button_pressed() -> void:
 	if not $StockInventory.visible: # we are opening in this case
 		for purchase in StockSystem.purchased_stocks_ids:
+			if StockSystem.purchased_stocks[purchase] == 0:
+				return
 			var item = stock_item_scene.instantiate()
 			var stock = StockSystem.stock_dict[purchase]
 			item.set_stock_item(stock.id, stock.share_cost, stock.name, stock.share_count, true)
