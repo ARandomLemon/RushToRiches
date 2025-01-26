@@ -1,8 +1,46 @@
-[gd_scene load_steps=4 format=3 uid="uid://dncyymcjptm6v"]
+[gd_scene load_steps=10 format=3 uid="uid://dncyymcjptm6v"]
 
 [ext_resource type="Script" path="res://Scripts/Phases/profit_phase.gd" id="1_dg8nf"]
 [ext_resource type="PackedScene" uid="uid://chcj7up8k8pa8" path="res://Assets(Buildings and foundation)/Packages/Charts/line_chart/Control.tscn" id="2_65hiv"]
+[ext_resource type="FontFile" uid="uid://j3g2jwwo7gnj" path="res://Assets(Buildings and foundation)/AlfaSlabOne-Regular.ttf" id="2_tbot1"]
+[ext_resource type="Texture2D" uid="uid://bfeeuoayiiuvs" path="res://Assets(Cards+Bubble)/bubble.png" id="3_owbsf"]
 [ext_resource type="Script" path="res://Scripts/Control.gd" id="3_vls6h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d1ap1"]
+bg_color = Color(0.9496, 0.814378, 0.270081, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.227451, 0.227451, 0.227451, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="Theme" id="Theme_mg0la"]
+default_font = ExtResource("2_tbot1")
+default_font_size = 27
+Button/colors/font_color = Color(0.227451, 0.227451, 0.227451, 1)
+Button/styles/normal = SubResource("StyleBoxFlat_d1ap1")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_17n6d"]
+bg_color = Color(0.9496, 0.814378, 0.270081, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.227451, 0.227451, 0.227451, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="Theme" id="Theme_gwsme"]
+default_font = ExtResource("2_tbot1")
+default_font_size = 27
+Button/colors/font_color = Color(0.227451, 0.227451, 0.227451, 1)
+Button/styles/normal = SubResource("StyleBoxFlat_17n6d")
 
 [node name="Profit Phase" type="Node2D"]
 
@@ -13,10 +51,38 @@ offset_right = 1152.0
 offset_bottom = 648.0
 script = ExtResource("1_dg8nf")
 
+[node name="ColorRect" type="ColorRect" parent="Prof_UI"]
+layout_mode = 0
+offset_right = 1148.0
+offset_bottom = 639.0
+color = Color(0.876862, 0.806694, 0.431544, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Prof_UI"]
+layout_mode = 0
+offset_left = -12.0
+offset_top = 364.0
+offset_right = 646.0
+offset_bottom = 699.0
+rotation = 0.261799
+color = Color(0.360784, 0.360784, 0.360784, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Prof_UI"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 448.0
+offset_right = 545.0
+offset_bottom = 700.0
+rotation = 0.0698132
+color = Color(0.960769, 0.927407, 0.742382, 1)
+
 [node name="TotalMoneyLabel" type="Label" parent="Prof_UI"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 28.0
+offset_top = 486.0
+offset_right = 306.0
+offset_bottom = 534.0
+theme = SubResource("Theme_mg0la")
+theme_override_colors/font_color = Color(0.359069, 0.359069, 0.359069, 1)
 text = "Total Balance: $"
 
 [node name="Timer" type="Node" parent="Prof_UI"]
@@ -35,17 +101,22 @@ autostart = true
 
 [node name="TotalEarnLabel" type="Label" parent="Prof_UI"]
 layout_mode = 0
-offset_top = 29.0
-offset_right = 128.0
-offset_bottom = 52.0
+offset_left = 26.0
+offset_top = 535.0
+offset_right = 270.0
+offset_bottom = 572.0
+theme = SubResource("Theme_gwsme")
+theme_override_colors/font_color = Color(0.360784, 0.360784, 0.360784, 1)
+theme_override_font_sizes/font_size = 36
 text = "Total Earnings: $"
 
 [node name="CardArrayLabel" type="Label" parent="Prof_UI"]
 layout_mode = 0
-offset_top = 58.0
-offset_right = 128.0
-offset_bottom = 81.0
-text = "Something about cards array?"
+offset_left = 29.0
+offset_top = 601.0
+offset_right = 157.0
+offset_bottom = 624.0
+text = "Cards: "
 
 [node name="PropEarnLabel" type="Label" parent="Prof_UI"]
 layout_mode = 0
@@ -53,7 +124,7 @@ offset_left = 141.0
 offset_top = 159.0
 offset_right = 181.0
 offset_bottom = 182.0
-text = "Properties Earniings: $"
+text = "Properties Earnings: $"
 
 [node name="StockEarnLabel" type="Label" parent="Prof_UI"]
 layout_mode = 0
@@ -70,5 +141,10 @@ offset_top = 192.0
 offset_right = -638.0
 offset_bottom = -238.0
 script = ExtResource("3_vls6h")
+
+[node name="Bubble" type="Sprite2D" parent="."]
+position = Vector2(916, 446)
+scale = Vector2(0.6175, 0.6175)
+texture = ExtResource("3_owbsf")
 
 [connection signal="timeout" from="Prof_UI/Timer/Timer" to="Prof_UI" method="_on_timer_timeout"]

@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=3 uid="uid://ck020hc5ue7v4"]
+
+[ext_resource type="Script" path="res://Scripts/Stock/stock_item.gd" id="1_bsiyy"]
+
+[sub_resource type="Gradient" id="Gradient_oxwxs"]
+colors = PackedColorArray(0.310617, 0.310617, 0.310617, 1, 0.462291, 0.462291, 0.462291, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_i5phs"]
+gradient = SubResource("Gradient_oxwxs")
+fill_to = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u5pj8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_160lv"]
+bg_color = Color(0.712129, 0.712129, 0.712129, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_v61ux"]
+font_size = 19
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+
+[node name="StockItem" type="CenterContainer"]
+z_index = 1
+custom_minimum_size = Vector2(128, 128)
+anchors_preset = -1
+anchor_right = 0.11
+anchor_bottom = 0.194
+offset_left = -0.5
+offset_top = -1.0
+offset_right = 0.779991
+offset_bottom = 1.28799
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bsiyy")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("GradientTexture2D_i5phs")
+
+[node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_u5pj8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_160lv")
+
+[node name="Short" type="Label" parent="."]
+layout_mode = 2
+text = "TESTING
+100$"
+label_settings = SubResource("LabelSettings_v61ux")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Hint" type="ColorRect" parent="Short"]
+visible = false
+z_index = 3
+layout_mode = 0
+offset_left = 50.0
+offset_top = -39.0
+offset_right = 305.0
+offset_bottom = 37.0
+pivot_offset = Vector2(0, 74.69)
+color = Color(0.136826, 0.136826, 0.136826, 1)
+
+[node name="Long" type="Label" parent="Short/Hint"]
+layout_mode = 0
+offset_right = 254.0
+offset_bottom = 75.0
+text = "Insane Big Test Company Ltd.
+Shares: 350/100000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="purchase_share"]

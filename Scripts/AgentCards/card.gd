@@ -10,8 +10,10 @@ func _ready() -> void:
 	#Populate card
 	$VBoxContainer/CardName.text = card_name
 	$VBoxContainer/Modifier.text = modifier
-	if $TextureRect:
-		$TextureRect.texture = load(texture_path)
+	$ColorRect/AnimationPlayer.play("line1")
+	$ColorRect2/AnimationPlayer.play("line2")
+	$ColorRect3/AnimationPlayer.play("line3")
+	$ColorRect4/AnimationPlayer.play("line4")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
