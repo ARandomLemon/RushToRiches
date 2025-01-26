@@ -2,7 +2,7 @@ extends Control
 
 var card_scene: PackedScene = preload("res://Scripts/AgentCards/card.tscn")
 
-func create_card(card_name : String, texture_path: String):
+func create_card(card_name : String):
 	var grid_container = $GridContainer
 	if not grid_container:
 		print("GridContainer not found!") 
@@ -10,7 +10,6 @@ func create_card(card_name : String, texture_path: String):
 
 	var card = card_scene.instantiate()
 	card.card_name = card_name
-	card.texture_path = texture_path
 	grid_container.add_child(card)
 
 # Called when the node enters the scene tree for the first time.
