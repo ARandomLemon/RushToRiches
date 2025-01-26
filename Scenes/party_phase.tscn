@@ -1,7 +1,28 @@
-[gd_scene load_steps=6 format=3 uid="uid://cmd3048uf0vk"]
+[gd_scene load_steps=9 format=3 uid="uid://cmd3048uf0vk"]
 
 [ext_resource type="Script" path="res://Scripts/Phases/party_phase.gd" id="1_1uxpp"]
 [ext_resource type="Script" path="res://Scripts/UI/user_interface.gd" id="1_x6qss"]
+[ext_resource type="FontFile" uid="uid://j3g2jwwo7gnj" path="res://Assets(Buildings and foundation)/AlfaSlabOne-Regular.ttf" id="3_i8iym"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_64v46"]
+bg_color = Color(0.9496, 0.814378, 0.270081, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.227451, 0.227451, 0.227451, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="Theme" id="Theme_m2w77"]
+default_font = ExtResource("3_i8iym")
+default_font_size = 30
+Button/colors/font_color = Color(0.227451, 0.227451, 0.227451, 1)
+Button/styles/normal = SubResource("StyleBoxFlat_64v46")
 
 [sub_resource type="Animation" id="Animation_vjuyb"]
 length = 0.001
@@ -67,6 +88,7 @@ size_flags_vertical = 4
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
+theme = SubResource("Theme_m2w77")
 text = "Go Back to Property Phase"
 
 [node name="Label" type="Label" parent="UI"]

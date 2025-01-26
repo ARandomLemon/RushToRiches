@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dncyymcjptm6v"]
+[gd_scene load_steps=10 format=3 uid="uid://dncyymcjptm6v"]
 
 [ext_resource type="Script" path="res://Scripts/Phases/profit_phase.gd" id="1_dg8nf"]
+[ext_resource type="PackedScene" uid="uid://chcj7up8k8pa8" path="res://Assets(Buildings and foundation)/Packages/Charts/line_chart/Control.tscn" id="2_65hiv"]
 [ext_resource type="FontFile" uid="uid://j3g2jwwo7gnj" path="res://Assets(Buildings and foundation)/AlfaSlabOne-Regular.ttf" id="2_tbot1"]
 [ext_resource type="Texture2D" uid="uid://bfeeuoayiiuvs" path="res://Assets(Cards+Bubble)/bubble.png" id="3_owbsf"]
+[ext_resource type="Script" path="res://Scripts/Control.gd" id="3_vls6h"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d1ap1"]
 bg_color = Color(0.9496, 0.814378, 0.270081, 1)
@@ -93,6 +95,7 @@ offset_bottom = 24.0
 text = "Time Left: 30s"
 
 [node name="Timer" type="Timer" parent="Prof_UI/Timer"]
+wait_time = 30.0
 one_shot = true
 autostart = true
 
@@ -131,8 +134,15 @@ offset_right = 599.0
 offset_bottom = 182.0
 text = "Stock Earnings: $"
 
+[node name="Control2" parent="Prof_UI" instance=ExtResource("2_65hiv")]
+layout_mode = 1
+offset_left = 130.0
+offset_top = 192.0
+offset_right = -638.0
+offset_bottom = -238.0
+script = ExtResource("3_vls6h")
+
 [node name="Bubble" type="Sprite2D" parent="Prof_UI"]
-position = Vector2(916, 446)
 scale = Vector2(0.6175, 0.6175)
 texture = ExtResource("3_owbsf")
 
