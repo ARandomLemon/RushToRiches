@@ -34,13 +34,13 @@ func _ready() -> void:
 		
 		match propList[b].category:
 			"residential":
-				propList[b].cost = 25000
+				propList[b].cost = 7500
 				propList[b].dollarsPerSecond = 2
 			"commercial":
-				propList[b].cost = 100000
+				propList[b].cost = 15000
 				propList[b].dollarsPerSecond = 5
 			"industry":
-				propList[b].cost = 500000
+				propList[b].cost = 37500
 				propList[b].dollarsPerSecond = 10
 			_: print("Invalid category")
 		

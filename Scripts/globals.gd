@@ -1,6 +1,6 @@
 extends Node
 
-@onready var money = 10000
+@onready var money = 15000
 @onready var property_array = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 @onready var propList =[]
 
