@@ -3,6 +3,21 @@
 [ext_resource type="Script" path="res://Scripts/Phases/party_phase.gd" id="1_1uxpp"]
 [ext_resource type="Script" path="res://Scripts/UI/user_interface.gd" id="1_x6qss"]
 
+[sub_resource type="Animation" id="Animation_vjuyb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 35)]
+}
+
 [sub_resource type="Animation" id="Animation_plftx"]
 resource_name = "sigma"
 length = 2.0
@@ -17,21 +32,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(15, 580), Vector2(30, 131)]
-}
-
-[sub_resource type="Animation" id="Animation_vjuyb"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Label:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 35)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1lap7"]
@@ -71,10 +71,9 @@ text = "Go Back to Property Phase"
 
 [node name="Label" type="Label" parent="UI"]
 layout_mode = 2
-offset_left = 15.0
-offset_top = 580.0
-offset_right = 402.0
-offset_bottom = 655.0
+offset_top = 35.0
+offset_right = 387.0
+offset_bottom = 110.0
 text = "You are currently playing the DEMO!
 Purchase the full game to unlock the card feature! 
 ಠ_ಠ"
