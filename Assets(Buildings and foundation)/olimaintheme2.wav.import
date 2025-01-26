@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ifoxuah2h6cl"
+path="res://.godot/imported/olimaintheme2.wav-a29be8fd6b5d8cdda83bab37cd9be197.sample"
+
+[deps]
+
+source_file="res://Assets(Buildings and foundation)/olimaintheme2.wav"
+dest_files=["res://.godot/imported/olimaintheme2.wav-a29be8fd6b5d8cdda83bab37cd9be197.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

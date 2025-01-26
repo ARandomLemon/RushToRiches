@@ -9,6 +9,7 @@ var stock_item_scene = preload("res://Scripts/Stock/stock_item.tscn")
 func _ready() -> void:
 	# Displays player variables upon loading scene - Tym
 	_update_text()
+	$AudioStreamPlayer2D.play()
 	$UI/AnimationPlayer.play("buttons_enter")
 	# Setting variables
 	#for loop to set the different buildings

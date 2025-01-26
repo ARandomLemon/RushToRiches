@@ -15,6 +15,7 @@ var graphs
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$AudioStreamPlayer2D.play()
 	graphs = get_node("Control2")
 	
 	for i in Globals.owned_property.size():

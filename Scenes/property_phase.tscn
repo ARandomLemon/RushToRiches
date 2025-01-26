@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://b2rywnh0rro0j"]
+[gd_scene load_steps=30 format=3 uid="uid://b2rywnh0rro0j"]
 
 [ext_resource type="Script" path="res://Scripts/Phases/property_phase.gd" id="1_vra2o"]
 [ext_resource type="Script" path="res://Scripts/globals.gd" id="2_qdl3r"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://ch81hrjsamw3s" path="res://Assets(Buildings and foundation)/CompanyBuilding.png" id="11_4a1k0"]
 [ext_resource type="Texture2D" uid="uid://bbitvxn0boite" path="res://Assets(Buildings and foundation)/Mall.png" id="12_pswn0"]
 [ext_resource type="FontFile" uid="uid://j3g2jwwo7gnj" path="res://Assets(Buildings and foundation)/AlfaSlabOne-Regular.ttf" id="16_f0smc"]
+[ext_resource type="AudioStream" uid="uid://d8funm2xnkaa" path="res://Assets(Buildings and foundation)/olishoptheme.wav" id="17_84o07"]
 
 [sub_resource type="Gradient" id="Gradient_ojdt7"]
 offsets = PackedFloat32Array(0, 0.538961, 0.831169)
@@ -603,6 +604,9 @@ offset_left = -96.0
 offset_top = -74.0
 offset_right = -13.0
 offset_bottom = 20.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("17_84o07")
 
 [connection signal="pressed" from="UI/Profit Phase Button" to="." method="_on_profit_phase_button_pressed"]
 [connection signal="pressed" from="UI/Stock Market" to="UI" method="_on_stock_market_button_pressed"]
