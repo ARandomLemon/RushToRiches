@@ -3,12 +3,13 @@ extends Node2D
 var ownedProp=[]
 var propList=[]
 var isFirstRun
+var stock_item_scene = preload("res://Scripts/Stock/stock_item.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# Displays player variables upon loading scene - Tym
 	_update_text()
-
+	$UI/AnimationPlayer.play("buttons_enter")
 	# Setting variables
 	#for loop to set the different buildings
 	for b in 10:
@@ -51,6 +52,12 @@ func _ready() -> void:
 		#print("cost: " + str(propList[b].cost))
 		#print("dps: " + str(propList[b].dollarsPerSecond))
 		#print("isOwned: " + str(propList[b].isOwned))
+	# Load this round's 3x3 for the stocks
+	var tbt = StockSystem.get_3x3_stock()
+	for stock in tbt:
+		var item = stock_item_scene.instantiate()
+		item.set_stock_item(stock.id, stock.share_cost, stock.name, stock.share_count)
+		$UI/StockMarket/GridContainer.add_child(item)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -60,7 +67,6 @@ func _process(delta: float) -> void:
 func _update_text():
 	$UI/MoneyLabel.text = "Money: " + str(Globals.money)
 	$UI/PropertyLabel.text = "Properties: " + str(Globals.property_array)
-	$UI/CardLabel.text = "Cards: " + str(Globals.card_array)
 
 func _on_exchange_building_info(id, category):
 	print(id, (category))
