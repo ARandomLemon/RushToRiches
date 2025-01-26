@@ -45,8 +45,6 @@ func _process(delta: float) -> void:
 		$TotalEarnLabel.text = "Total Earnings: $" + str(totalEarn)
 		$PropEarnLabel.text = "Property Earnings: $" + str(propEarn)
 		$StockEarnLabel.text = "Stock Earnings: $" + str(stockEarn)
-
-		$CardArrayLabel.text = "Cards:" + str(Globals.card_array)
 		$Timer/TimeLabel.text = "Time Left: " + str($Timer/Timer.time_left) + "s"		
 
 		
