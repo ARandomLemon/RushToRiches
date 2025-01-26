@@ -4,6 +4,8 @@ var totalEarn: float
 var propEarn:float
 var stockEarn:float
 var totalSum:float
+var scale:float
+var sigma
 
 var prop_arr = [0,0,0]
 
@@ -37,6 +39,7 @@ func _process(delta: float) -> void:
 		totalEarn = propEarn + stockEarn
 		
 		totalSum = Globals.money + totalEarn
+		increase_size()
 		
 		$TotalMoneyLabel.text = "Total Balance: $" + str(totalSum)
 		$TotalEarnLabel.text = "Total Earnings: $" + str(totalEarn)
@@ -45,10 +48,17 @@ func _process(delta: float) -> void:
 
 		$CardArrayLabel.text = "Cards:" + str(Globals.card_array)
 		$Timer/TimeLabel.text = "Time Left: " + str($Timer/Timer.time_left) + "s"		
+
 		
 		var elapsed_time = $Timer/Timer.wait_time-$Timer/Timer.time_left
 		graphs.setNewPoint(elapsed_time, totalEarn)
 	pass
+
+
+var scalar :float = 0.05
+func increase_size():
+	scalar += 0.0004
+	$Bubble.scale = Vector2(scalar,scalar)
 
 func _on_timer_timeout() -> void:
 	Globals.money = totalSum

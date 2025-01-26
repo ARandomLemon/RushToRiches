@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c5hcix0tjhrhw"]
+[gd_scene load_steps=10 format=3 uid="uid://dncyymcjptm6v"]
 
 [ext_resource type="Script" path="res://Scripts/Phases/profit_phase.gd" id="1_dg8nf"]
 [ext_resource type="PackedScene" uid="uid://chcj7up8k8pa8" path="res://Assets(Buildings and foundation)/Packages/Charts/line_chart/Control.tscn" id="2_65hiv"]
@@ -142,9 +142,9 @@ offset_right = -638.0
 offset_bottom = -238.0
 script = ExtResource("3_vls6h")
 
-[node name="Bubble" type="Sprite2D" parent="."]
-position = Vector2(916, 446)
-scale = Vector2(0.6175, 0.6175)
+[node name="Bubble" type="Sprite2D" parent="Prof_UI"]
+position = Vector2(871, 428)
+scale = Vector2(0.297917, 0.30625)
 texture = ExtResource("3_owbsf")
 
 [connection signal="timeout" from="Prof_UI/Timer/Timer" to="Prof_UI" method="_on_timer_timeout"]

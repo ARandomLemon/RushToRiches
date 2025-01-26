@@ -90,6 +90,7 @@ rotation = -0.118682
 color = Color(0.94902, 0.815686, 0.270588, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="ColorRect2"]
+layout_mode = 0
 offset_left = -217.371
 offset_top = 252.035
 offset_right = 1294.63
@@ -126,6 +127,7 @@ text = "Quit"
 
 [node name="MoneyLabel" type="Label" parent="."]
 z_index = 2
+layout_mode = 0
 offset_left = -20.0
 offset_top = 60.0
 offset_right = 1118.0
@@ -140,6 +142,7 @@ text = "RUSH TO RICHES
 "
 
 [node name="MoneyLabel2" type="Label" parent="."]
+layout_mode = 0
 offset_left = 15.0236
 offset_top = 122.145
 offset_right = 896.024
