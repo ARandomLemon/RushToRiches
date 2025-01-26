@@ -42,155 +42,155 @@ default_font_size = 27
 Button/colors/font_color = Color(0.227451, 0.227451, 0.227451, 1)
 Button/styles/normal = SubResource("StyleBoxFlat_17n6d")
 
+[sub_resource type="Animation" id="Animation_5np3g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UI/Stock Market:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(20, 301)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UI/Stock Market:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.113446]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("UI/View My Stocks:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(53, 404)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("UI/PropertyLabel:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("UI/Profit Phase Button:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("UI/Profit Phase Button:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
 [sub_resource type="Animation" id="Animation_ql2j3"]
 resource_name = "buttons_enter"
 length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("UI/Profit Phase Button:position")
+tracks/0/path = NodePath("UI/Stock Market:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.866667, 1.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(-500, 193), Vector2(60, 193), Vector2(17, 193)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("UI/Profit Phase Button:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(-0.0333333, 0.833333, 1.16667),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [-0.261799, -0.0523599, -0.0139626]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("UI/Stock Market:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(0, 1.16667, 1.4),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(-600, 301), Vector2(60, 301), Vector2(30, 301)]
 }
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("UI/Stock Market:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UI/Stock Market:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0, 1.16667, 1.4),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [0.20944, 0.261799, 0.113446]
 }
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("UI/View My Stocks:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("UI/View My Stocks:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
 "times": PackedFloat32Array(0, 1.36667, 1.7),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(-600, 404), Vector2(70, 404), Vector2(53, 404)]
 }
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("UI/View My Stocks:rotation")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("UI/View My Stocks:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "times": PackedFloat32Array(0, 1.36667, 1.7),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [-0.20944, -0.10472, -0.0523599]
 }
-
-[sub_resource type="Animation" id="Animation_5np3g"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("UI/Profit Phase Button:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(17, 193)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("UI/Profit Phase Button:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [-0.0139626]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("UI/Stock Market:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(20, 301)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("UI/Stock Market:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.113446]
-}
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("UI/View My Stocks:position")
+tracks/4/path = NodePath("UI/Profit Phase Button:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1.36667, 1.7),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(53, 404)]
+"values": [Vector2(-800, 190), Vector2(64, 190), Vector2(27, 190)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("UI/View My Stocks:rotation")
+tracks/5/path = NodePath("UI/Profit Phase Button:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1.56667, 1.86667),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [-0.0523599]
+"values": [0.122173, 0.0523599, -0.0349066]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sbr2l"]
@@ -344,15 +344,11 @@ scale = Vector2(2.355, 2.195)
 pivot_offset = Vector2(77, 33)
 color = Color(0.999996, 0.425794, 0.357092, 1)
 
-[node name="UI" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 1151.0
-offset_bottom = 648.0
+[node name="UI" type="CanvasLayer" parent="."]
+layer = 2
 script = ExtResource("3_tg0ud")
 
 [node name="PropertyLabel" type="Label" parent="UI"]
-layout_mode = 0
 offset_left = 21.0
 offset_top = 13.0
 offset_right = 106.0
@@ -361,7 +357,6 @@ rotation = 0.13439
 text = "Properties:"
 
 [node name="MoneyLabel" type="Label" parent="UI"]
-layout_mode = 0
 offset_left = 15.0
 offset_top = 39.0
 offset_right = 121.0
@@ -377,18 +372,28 @@ libraries = {
 "": SubResource("AnimationLibrary_sbr2l")
 }
 
+[node name="MarginContainer" type="MarginContainer" parent="UI"]
+offset_left = 27.0
+offset_top = 195.0
+offset_right = 249.0
+offset_bottom = 302.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
 [node name="Profit Phase Button" type="Button" parent="UI"]
-offset_left = 17.0
-offset_top = 193.0
-offset_right = 340.0
-offset_bottom = 267.0
-rotation = -0.0139626
-scale = Vector2(1.06, 1.06)
-pivot_offset = Vector2(156.135, 31.735)
+offset_left = -800.0
+offset_top = 190.0
+offset_right = -493.0
+offset_bottom = 251.0
+rotation = 0.122173
+pivot_offset = Vector2(152.595, 21.94)
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme = SubResource("Theme_5td2h")
-text = "Start Profit Phase!"
+text = "Profit!"
 
 [node name="Stock Market" type="Button" parent="UI"]
 offset_left = 20.0
@@ -407,7 +412,7 @@ offset_left = 53.0
 offset_top = 404.0
 offset_right = 261.0
 offset_bottom = 473.0
-rotation = -0.0523599
+rotation = -0.20944
 pivot_offset = Vector2(103.26, 32.59)
 size_flags_horizontal = 0
 size_flags_vertical = 0
@@ -417,6 +422,7 @@ text = "View My Stocks"
 [node name="StockMarket" type="Control" parent="UI"]
 visible = false
 z_as_relative = false
+layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -451,48 +457,9 @@ offset_right = -408.0
 offset_bottom = -213.0
 columns = 3
 
-[node name="Stock" type="Button" parent="UI/StockMarket/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "ATT
-25 Shares @
-25$/Share"
-
-[node name="Stock2" type="Button" parent="UI/StockMarket/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "RSDG
-56 Shares @
-5$/Share"
-
-[node name="Stock3" type="Button" parent="UI/StockMarket/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "ABCD
-40 Shares @
-15$/Share"
-
-[node name="Stock4" type="Button" parent="UI/StockMarket/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "MPSQ
-135 Shares @
-3$/Share"
-
-[node name="Stock5" type="Button" parent="UI/StockMarket/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "GNEL
-25 Shares @
-30$/Share"
-
 [node name="StockInventory" type="Control" parent="UI"]
 visible = false
+layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
