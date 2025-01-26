@@ -4,6 +4,7 @@ var id = 000
 var category = "retail"
 var cost = 0
 var dollarsPerSecond = 0
+var isOwned: bool = false
 
 signal exchange_building_info(id, category)
 
@@ -21,7 +22,13 @@ func _on_buy_button_pressed() -> void:
 		if (Globals.property_array[i] == id ):
 			print("already bought!")
 			break
-		if (Globals.property_array[i] == 0 ):
+		if (Globals.property_array[i] == 0 && Globals.money>=cost):
 			Globals.property_array[i] = id
 			exchange_building_info.emit(id, category)
+			isOwned = true
+			Globals.num_property_owned += 1
+			Globals.money -= cost
+			break
+		elif(Globals.property_array[i] == 0 && Globals.money<=cost): 
+			print("You're poor. Get your money up not your funny up")
 			break

@@ -353,7 +353,7 @@ offset_top = -74.0
 offset_right = -13.0
 offset_bottom = 20.0
 
-[connection signal="pressed" from="UI/MarginContainer/VBoxContainer/Profit Phase Button" to="UI" method="_on_profit_phase_button_pressed"]
+[connection signal="pressed" from="UI/MarginContainer/VBoxContainer/Profit Phase Button" to="." method="_on_profit_phase_button_pressed"]
 [connection signal="pressed" from="UI/MarginContainer/VBoxContainer/Buy Example Button" to="UI" method="_on_buy_example_button_pressed"]
 [connection signal="pressed" from="UI/MarginContainer/VBoxContainer/Stock Market" to="UI" method="_on_stock_market_button_pressed"]
 [connection signal="pressed" from="UI/MarginContainer/VBoxContainer/View My Stocks" to="UI" method="_on_stock_inventory_button_pressed"]
