@@ -55,9 +55,9 @@ func _process(delta: float) -> void:
 	pass
 
 
-var scalar :float = 0.5
+var scalar :float = 0.05
 func increase_size():
-	scalar += 0.0005
+	scalar += 0.0004
 	$Bubble.scale = Vector2(scalar,scalar)
 
 func _on_timer_timeout() -> void:
