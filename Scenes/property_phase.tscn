@@ -55,15 +55,11 @@ offset_bottom = 245.0
 text = "HELP!!!!!!!!!!!!!!!!!!!!!!!!!
 "
 
-[node name="UI" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 1151.0
-offset_bottom = 648.0
+[node name="UI" type="CanvasLayer" parent="."]
+layer = 2
 script = ExtResource("3_tg0ud")
 
 [node name="PropertyLabel" type="Label" parent="UI"]
-layout_mode = 0
 offset_left = 37.0
 offset_top = 50.0
 offset_right = 122.0
@@ -71,7 +67,6 @@ offset_bottom = 73.0
 text = "Properties:"
 
 [node name="MoneyLabel" type="Label" parent="UI"]
-layout_mode = 0
 offset_left = 37.0
 offset_top = 22.0
 offset_right = 107.0
@@ -79,7 +74,6 @@ offset_bottom = 45.0
 text = "Money:"
 
 [node name="CardLabel" type="Label" parent="UI"]
-layout_mode = 0
 offset_left = 37.0
 offset_top = 78.0
 offset_right = 91.0
@@ -87,7 +81,6 @@ offset_bottom = 101.0
 text = "Cards:"
 
 [node name="MarginContainer" type="MarginContainer" parent="UI"]
-layout_mode = 0
 offset_left = 27.0
 offset_top = 195.0
 offset_right = 249.0
@@ -124,6 +117,7 @@ text = "View My Stocks"
 
 [node name="StockMarket" type="Control" parent="UI"]
 visible = false
+layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -158,48 +152,9 @@ offset_right = -408.0
 offset_bottom = -213.0
 columns = 3
 
-[node name="Stock" type="Button" parent="UI/StockMarket/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "ATT
-25 Shares @
-25$/Share"
-
-[node name="Stock2" type="Button" parent="UI/StockMarket/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "RSDG
-56 Shares @
-5$/Share"
-
-[node name="Stock3" type="Button" parent="UI/StockMarket/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "ABCD
-40 Shares @
-15$/Share"
-
-[node name="Stock4" type="Button" parent="UI/StockMarket/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "MPSQ
-135 Shares @
-3$/Share"
-
-[node name="Stock5" type="Button" parent="UI/StockMarket/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "GNEL
-25 Shares @
-30$/Share"
-
 [node name="StockInventory" type="Control" parent="UI"]
 visible = false
+layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0

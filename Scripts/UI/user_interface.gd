@@ -1,5 +1,6 @@
-extends Control
+extends Node
 
+var stock_item_scene = preload("res://Scripts/Stock/stock_item.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -35,4 +36,14 @@ func _on_stock_market_button_pressed() -> void:
 	$StockMarket.visible = !$StockMarket.visible
 
 func _on_stock_inventory_button_pressed() -> void:
+	if not $StockInventory.visible: # we are opening in this case
+		for purchase in StockSystem.purchased_stocks_ids:
+			var item = stock_item_scene.instantiate()
+			var stock = StockSystem.stock_dict[purchase]
+			item.set_stock_item(stock.id, stock.share_cost, stock.name, stock.share_count, true)
+			$StockInventory/GridContainer.add_child(item)
+	else:
+		for node in $StockInventory/GridContainer.get_children():
+			$StockInventory/GridContainer.remove_child(node)
+			node.queue_free()
 	$StockInventory.visible = !$StockInventory.visible
