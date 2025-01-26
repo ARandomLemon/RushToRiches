@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dncyymcjptm6v"]
+[gd_scene load_steps=4 format=3 uid="uid://dncyymcjptm6v"]
 
 [ext_resource type="Script" path="res://Scripts/Phases/profit_phase.gd" id="1_dg8nf"]
+[ext_resource type="PackedScene" uid="uid://chcj7up8k8pa8" path="res://Assets(Buildings and foundation)/Packages/Charts/line_chart/Control.tscn" id="2_65hiv"]
+[ext_resource type="Script" path="res://Scripts/Control.gd" id="3_vls6h"]
 
 [node name="Profit Phase" type="Node2D"]
 
@@ -27,6 +29,7 @@ offset_bottom = 24.0
 text = "Time Left: 30s"
 
 [node name="Timer" type="Timer" parent="Prof_UI/Timer"]
+wait_time = 30.0
 one_shot = true
 autostart = true
 
@@ -42,7 +45,7 @@ layout_mode = 0
 offset_top = 58.0
 offset_right = 128.0
 offset_bottom = 81.0
-text = "Total Earnings: $"
+text = "Something about cards array?"
 
 [node name="PropEarnLabel" type="Label" parent="Prof_UI"]
 layout_mode = 0
@@ -59,5 +62,13 @@ offset_top = 159.0
 offset_right = 599.0
 offset_bottom = 182.0
 text = "Stock Earnings: $"
+
+[node name="Control2" parent="Prof_UI" instance=ExtResource("2_65hiv")]
+layout_mode = 1
+offset_left = 130.0
+offset_top = 192.0
+offset_right = -638.0
+offset_bottom = -238.0
+script = ExtResource("3_vls6h")
 
 [connection signal="timeout" from="Prof_UI/Timer/Timer" to="Prof_UI" method="_on_timer_timeout"]
