@@ -8,7 +8,7 @@ var card_array = ["test"]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	$TotalEarnedLabel.text = "Money You Had before it all became useless: $" + str(money)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

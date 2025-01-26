@@ -53,8 +53,8 @@ script = ExtResource("1_dg8nf")
 
 [node name="ColorRect" type="ColorRect" parent="Prof_UI"]
 layout_mode = 0
-offset_right = 1148.0
-offset_bottom = 639.0
+offset_right = 1152.0
+offset_bottom = 647.0
 color = Color(0.876862, 0.806694, 0.431544, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="Prof_UI"]

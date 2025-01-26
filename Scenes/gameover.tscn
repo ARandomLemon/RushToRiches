@@ -1,8 +1,35 @@
-[gd_scene load_steps=4 format=3 uid="uid://5hpwaowdfeqg"]
+[gd_scene load_steps=8 format=3 uid="uid://5hpwaowdfeqg"]
 
 [ext_resource type="Script" path="res://Scripts/Phases/gameover.gd" id="1_3t478"]
 [ext_resource type="Texture2D" uid="uid://f1h8trsmpmsq" path="res://Assets(Cards+Bubble)/bubble(popped).png" id="2_2hrwk"]
 [ext_resource type="Texture2D" uid="uid://4hwtkjvf1v7a" path="res://Assets(Buildings and foundation)/Depositors-American-Union-Bank-New-York-York-1932.webp" id="2_yoldo"]
+[ext_resource type="FontFile" uid="uid://j3g2jwwo7gnj" path="res://Assets(Buildings and foundation)/AlfaSlabOne-Regular.ttf" id="3_8a88h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_64v46"]
+bg_color = Color(0.9496, 0.814378, 0.270081, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.227451, 0.227451, 0.227451, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="Theme" id="Theme_cnaqe"]
+default_font = ExtResource("3_8a88h")
+default_font_size = 30
+Button/colors/font_color = Color(0.227451, 0.227451, 0.227451, 1)
+Button/styles/normal = SubResource("StyleBoxFlat_64v46")
+
+[sub_resource type="Theme" id="Theme_b7ko4"]
+default_font = ExtResource("3_8a88h")
+default_font_size = 30
+Button/colors/font_color = Color(0.227451, 0.227451, 0.227451, 1)
+Button/styles/normal = SubResource("StyleBoxFlat_64v46")
 
 [node name="Gameover" type="Node2D"]
 script = ExtResource("1_3t478")
@@ -22,31 +49,40 @@ texture = ExtResource("2_yoldo")
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1153.0
-offset_bottom = 647.0
+offset_bottom = 652.0
 
 [node name="RestartButton" type="Button" parent="UI"]
 layout_mode = 0
-offset_left = 518.0
-offset_top = 485.0
-offset_right = 606.0
-offset_bottom = 516.0
+offset_left = 925.0
+offset_top = 429.0
+offset_right = 1108.0
+offset_bottom = 481.0
+theme = SubResource("Theme_cnaqe")
 text = "Play Again
 "
 
 [node name="ExitButton" type="Button" parent="UI"]
 layout_mode = 0
-offset_left = 543.0
-offset_top = 533.0
-offset_right = 580.0
-offset_bottom = 587.0
-text = "Exit
-
-"
+offset_left = 1031.0
+offset_top = 498.0
+offset_right = 1105.0
+offset_bottom = 552.0
+theme = SubResource("Theme_b7ko4")
+text = "Exit"
 
 [node name="Bubble(popped)" type="Sprite2D" parent="."]
-position = Vector2(562, 266)
+position = Vector2(905, 246)
 scale = Vector2(0.387083, 0.387083)
 texture = ExtResource("2_2hrwk")
+
+[node name="TotalEarnedLabel" type="Label" parent="."]
+offset_left = 12.0
+offset_top = 605.0
+offset_right = 771.0
+offset_bottom = 669.0
+theme_override_fonts/font = ExtResource("3_8a88h")
+theme_override_font_sizes/font_size = 31
+text = "Money You Had before it all became useless: $"
 
 [connection signal="pressed" from="UI/RestartButton" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="UI/ExitButton" to="." method="_on_exit_button_pressed"]
