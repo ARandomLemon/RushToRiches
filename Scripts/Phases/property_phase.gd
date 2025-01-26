@@ -11,20 +11,56 @@ func _ready() -> void:
 
 	# Setting variables
 	#for loop to set the different buildings
-	for building in 10:
-		var node_text:String = "Building" + str((building + 1))
+	for b in 10:
+		var node_text:String = "Building" + str((b + 1))
 		propList.append(get_node(node_text))
-		propList[building].id = building + 1
-		propList[building].exchange_building_info.connect(_on_exchange_building_info)
+		propList[b].id = b + 1
+		propList[b].exchange_building_info.connect(_on_exchange_building_info)
+		
+		match propList[b].id:
+			1:	propList[b].category = "residential"
+			2:	propList[b].category = "commercial"
+			3:	propList[b].category = "commercial"
+			4:	propList[b].category = "residential"
+			5:	propList[b].category = "residential"
+			6:	propList[b].category = "commercial"
+			7:	propList[b].category = "residential"
+			8:	propList[b].category = "residential"
+			9:	propList[b].category = "industry"
+			10:	propList[b].category = "industry"
+			_: print("invalid ID")
+		
+		match propList[b].category:
+			"residential":
+				propList[b].cost = 25000
+				propList[b].dollarsPerSecond = 2
+			"commercial":
+				propList[b].cost = 100000
+				propList[b].dollarsPerSecond = 5
+			"industry":
+				propList[b].cost = 500000
+				propList[b].dollarsPerSecond = 10
+			_: print("Invalid category")
+		
+		for i in Globals.owned_property.size():
+			if(Globals.owned_property[i][0] == propList[b].id):
+				propList[b].isOwned = true
+				
+		#print("id: " + str(propList[b].id))
+		#print("cat: " + str(propList[b].category))
+		#print("cost: " + str(propList[b].cost))
+		#print("dps: " + str(propList[b].dollarsPerSecond))
+		#print("isOwned: " + str(propList[b].isOwned))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	$UI/MoneyLabel.text = "Money: " + str(Globals.money)
 
 
 func _update_text():
 	$UI/MoneyLabel.text = "Money: " + str(Globals.money)
 	$UI/PropertyLabel.text = "Properties: " + str(Globals.property_array)
+	$UI/CardLabel.text = "Cards: " + str(Globals.card_array)
 
 func _on_exchange_building_info(id, category):
 	print(id, (category))
@@ -32,18 +68,20 @@ func _on_exchange_building_info(id, category):
 
 
 func _on_profit_phase_button_pressed() -> void:
+	Globals.owned_property.clear()
+	
 	for i in Globals.num_property_owned:
 		Globals.owned_property.append([null,null,null,null,null])
 	
 	var i :int = 0
 	for b in 10:
+		#print(propList[b].isOwned)
 		if(propList[b].isOwned):
-			#for i in 5:
 			Globals.owned_property[i][0] = propList[b].id
 			Globals.owned_property[i][1] = propList[b].category
 			Globals.owned_property[i][2] = propList[b].cost
 			Globals.owned_property[i][3] = propList[b].dollarsPerSecond
 			Globals.owned_property[i][4] = propList[b].isOwned
-			i+=1
+			i += 1
 	
 	get_tree().change_scene_to_file("res://Scenes/profit_phase.tscn")
