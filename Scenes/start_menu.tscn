@@ -1,6 +1,69 @@
-[gd_scene load_steps=2 format=3 uid="uid://c0gk51pdcip1y"]
+[gd_scene load_steps=10 format=3 uid="uid://c0gk51pdcip1y"]
 
 [ext_resource type="Script" path="res://Scripts/UI/user_interface.gd" id="1_gm35p"]
+[ext_resource type="FontFile" uid="uid://j3g2jwwo7gnj" path="res://Assets(Buildings and foundation)/AlfaSlabOne-Regular.ttf" id="2_xf01h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_64v46"]
+bg_color = Color(0.9496, 0.814378, 0.270081, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.227451, 0.227451, 0.227451, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="Theme" id="Theme_t8j7m"]
+default_font = ExtResource("2_xf01h")
+default_font_size = 30
+Button/colors/font_color = Color(0.227451, 0.227451, 0.227451, 1)
+Button/styles/normal = SubResource("StyleBoxFlat_64v46")
+
+[sub_resource type="Theme" id="Theme_fmgiy"]
+default_font = ExtResource("2_xf01h")
+default_font_size = 27
+Button/colors/font_color = Color(0.227451, 0.227451, 0.227451, 1)
+Button/styles/normal = SubResource("StyleBoxFlat_64v46")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uookj"]
+bg_color = Color(0.9496, 0.814378, 0.270081, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.227451, 0.227451, 0.227451, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="Theme" id="Theme_grmg8"]
+default_font = ExtResource("2_xf01h")
+default_font_size = 27
+Button/colors/font_color = Color(0.227451, 0.227451, 0.227451, 1)
+Button/styles/normal = SubResource("StyleBoxFlat_uookj")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_17n6d"]
+bg_color = Color(0.9496, 0.814378, 0.270081, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.227451, 0.227451, 0.227451, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="Theme" id="Theme_nyrhc"]
+default_font = ExtResource("2_xf01h")
+default_font_size = 27
+Button/colors/font_color = Color(0.227451, 0.227451, 0.227451, 1)
+Button/styles/normal = SubResource("StyleBoxFlat_17n6d")
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -10,6 +73,29 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gm35p")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1149.0
+offset_bottom = 652.0
+color = Color(0.434786, 0.452383, 0.516413, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -77.0
+offset_top = -25.0
+offset_right = 1435.0
+offset_bottom = 182.0
+rotation = -0.118682
+color = Color(0.94902, 0.815686, 0.270588, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect2"]
+offset_left = -217.371
+offset_top = 252.035
+offset_right = 1294.63
+offset_bottom = 577.035
+rotation = 0.389208
+color = Color(0.266667, 0.266667, 0.266667, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
@@ -25,13 +111,42 @@ size_flags_vertical = 4
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme = SubResource("Theme_t8j7m")
 text = "Start"
 
 [node name="Quit Button" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme = SubResource("Theme_fmgiy")
 text = "Quit"
+
+[node name="MoneyLabel" type="Label" parent="."]
+z_index = 2
+offset_left = -20.0
+offset_top = 60.0
+offset_right = 1118.0
+offset_bottom = 227.0
+rotation = -0.118682
+scale = Vector2(0.495, 0.495)
+pivot_offset = Vector2(51.06, 16.835)
+theme = SubResource("Theme_grmg8")
+theme_override_colors/font_color = Color(0.266575, 0.266575, 0.266575, 1)
+theme_override_font_sizes/font_size = 121
+text = "RUSH TO RICHES
+"
+
+[node name="MoneyLabel2" type="Label" parent="."]
+offset_left = 15.0236
+offset_top = 122.145
+offset_right = 896.024
+offset_bottom = 213.145
+rotation = -0.118682
+pivot_offset = Vector2(51.06, 16.835)
+theme = SubResource("Theme_nyrhc")
+theme_override_font_sizes/font_size = 31
+text = "Before the Bubble Bursts
+"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Start Button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit Button" to="." method="_on_quit_button_pressed"]

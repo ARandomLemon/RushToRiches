@@ -24,7 +24,7 @@ colors = PackedColorArray(0.239216, 0.776471, 0.858824, 1, 0.298039, 0.764706, 0
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_l3py2"]
 gradient = SubResource("Gradient_ojdt7")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_17n6d"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4c38w"]
 bg_color = Color(0.9496, 0.814378, 0.270081, 1)
 border_width_left = 5
 border_width_top = 5
@@ -40,7 +40,7 @@ corner_radius_bottom_left = 15
 default_font = ExtResource("16_f0smc")
 default_font_size = 27
 Button/colors/font_color = Color(0.227451, 0.227451, 0.227451, 1)
-Button/styles/normal = SubResource("StyleBoxFlat_17n6d")
+Button/styles/normal = SubResource("StyleBoxFlat_4c38w")
 
 [sub_resource type="Animation" id="Animation_5np3g"]
 length = 0.001
