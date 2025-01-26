@@ -28,10 +28,6 @@ func _on_buy_example_button_pressed() -> void:
 	$PropertyLabel.text = "Properties: " + str(Globals.property_array)
 
 
-func _on_profit_phase_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/profit_phase.tscn")
-
-
 func _on_property_phase_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/property_phase.tscn")
 	
