@@ -44,4 +44,8 @@ func _process(delta: float) -> void:
 
 func _on_timer_timeout() -> void:
 	Globals.money = totalSum
-	get_tree().change_scene_to_file("res://Scenes/party_phase.tscn")
+	if(Globals.round_counter < 6):
+		get_tree().change_scene_to_file("res://Scenes/party_phase.tscn")
+		Globals.round_counter += 1
+	else:
+		get_tree().change_scene_to_file("res://Scenes/gameover.tscn")
