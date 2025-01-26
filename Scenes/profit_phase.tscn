@@ -49,11 +49,13 @@ offset_bottom = 648.0
 script = ExtResource("1_dg8nf")
 
 [node name="ColorRect" type="ColorRect" parent="Prof_UI"]
+layout_mode = 0
 offset_right = 1148.0
 offset_bottom = 639.0
 color = Color(0.876862, 0.806694, 0.431544, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="Prof_UI"]
+layout_mode = 0
 offset_left = -12.0
 offset_top = 364.0
 offset_right = 646.0
@@ -62,6 +64,7 @@ rotation = 0.261799
 color = Color(0.360784, 0.360784, 0.360784, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="Prof_UI"]
+layout_mode = 0
 offset_left = -3.0
 offset_top = 448.0
 offset_right = 545.0
